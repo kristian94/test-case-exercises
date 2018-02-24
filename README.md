@@ -222,3 +222,17 @@ To check for null inputs
 
 With these changes i got the following test results:
 
+![test results](https://github.com/kristian94/test-case-exercises/blob/master/img/test-results.PNG)
+
+#### 5. State Table vs State Diagram
+
+To me, the benefit of state diagrams is that they let you illustrate state changes in a simple way, that is easy to follow. State
+tables are a bit more condensed and I don't think they provide the same quick overview. You can't really glance at a state table
+and immediately gain insight into the states and transitions of the method. The table is probably the better choice if you want
+to meticulously model out every state and transition, whereas the diagram is better for quickly illustrating the main transitions
+and states within the method.
+
+#### 6. Conclusion
+
+For this assignment I chose to hit a coverage level of 100% (both for states visited and transitions exercised). The choice was a bit influenced by the fact that I knew the code I was testing had faults, and I wanted to make sure my tests would reveal them (which I guess is generally a good mentality to have when coding). Another reason was that I, since I did not write the code I was testing myself, I had no idea where bugs would be most likely to appear. I think experience is also an important factor here, since you can sometimes preemptively determine that a section of code will need good test coverage (maybe because it was a particularly complex or difficult section). This is where metrics could also come in handy, as they can help reveal which parts of your code are complex/more 
+prone to errors.
