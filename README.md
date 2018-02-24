@@ -54,18 +54,18 @@ n < 0 | n <= 0
 Boundary values would depend on the Integer type. If we assume the type is
 int32 (32 bit integer), the boundaries are the following:
  
-invalid (too low) | min | min+ | normal | max- | max | invalid (too high)
----|---|---|---|---|---
--2147483649 | -2147483648 | -2147483647 | 0 | 2147483647 | 2147483648 | 2147483649
+invalid (too low) | min | min+ | normal | max- | max | invalid (too high) |
+---|---|---|---|---|---|---
+-2147483649 | -2147483648 | -2147483647 | 0 | 2147483647 | 2147483648 | 2147483649 |
 
 
 #### 2. Mortgage Applicant's Salary
 
 Boundaries for valid amount are 1000-75000, producing the following values:
 
-invalid (too low) | min | min+ | normal | max- | max | invalid (too high)
----|---|---|---|---|---|---
-999 | 1000 | 1001 | 37000 | 74999 | 75000 | 75001
+invalid (too low) | min | min+ | normal | max- | max | invalid (too high) |
+---|---|---|---|---|---|---|
+999 | 1000 | 1001 | 37000 | 74999 | 75000 | 75001|
 
 #### 3. GetNumDaysInMonth
 
