@@ -76,3 +76,39 @@ Valid months are between 0 (January) - 11 (December):
 invalid (too low) | min | min+ | normal | max- | max | invalid (too high)
 ---|---|---|---|---|---|---
 -1 | 0 | 1 | 5 | 10 | 11 | 12
+
+## Decision Tables
+
+#### Reimburse
+
+Decision table for reimbursing patients based on deductible status and visit type:
+
+conditions           |   |   |   |   |   |   |   |   |
+:---                 |---|---|---|---|---|---|---|--- 
+decuctibleHasBeenMet | T | T | T | T | F | F | F | F
+doctorsOfficeVisit   | T | T | F | F | T | T | F | F
+hospitalVisit        | T | F | T | F | T | F | T | F
+**actions**          |   |   |   |   |   |   |   |   |
+don't reimburse      |   |   |   | X | X | X | X | X 
+reimburse 50%        |   | X |   |   |   |   |   |   |
+reimburse 80%        | X |   | X |   |   |   |   |   |
+
+*The scenario where `doctorsOfficeVisit` and `hospitalVisit` is a bit unlikely and would probably be handled as 2 individual
+scenarios*
+
+#### Leap Year
+
+Table for deciding wether or not a given year is a leap year
+
+conditions              |   |   |   |   |   |   |   |   |
+:---                    |---|---|---|---|---|---|---|--- 
+divisibleByFour         | T | T | T | T | F | F | F | F
+divisibleByOneHundred   | T | T | F | F | T | T | F | F
+divisibleByFourHundred  | T | F | T | F | T | F | T | F
+**actions**             |   |   |   |   |   |   |   |   |
+isLeapYear              | X |   | X | X | X |   | X |   |
+isNotYearLeap           |   | X |   |   |   | X |   | X |
+
+*Since 100 will always be divisble by 4 and 400 will also always be divisble by both 4 and 100, some of the scenarios will techichally be impossible*
+
+
