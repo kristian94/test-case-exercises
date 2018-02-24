@@ -187,6 +187,38 @@ invalid | throw IndexOutOfBoundsException
 
 #### 3. Unit Tests
 
-See 
+My unit tests for the exercise can be found here: https://github.com/kristian94/test-case-exercises/blob/master/code/src/Refactored/MyArrayListTest.java
 
+I kept the original code in the "Orig" folder, and the revised code and tests in the "Refactored" folder.
+
+#### 4. Refactoring
+
+Based on my Unit tests i adjusted the code.
+
+I changed the "get" method, which would throw an Exception when you input '0'.
+
+before:
+```java
+if(index <= 0 || nextFree < index)
+            throw new IndexOutOfBoundsException("Error (get): Invalid index" +
+                    index);
+```
+
+after:
+```java
+if(index < 0 || nextFree < index)
+            throw new IndexOutOfBoundsException("Error (get): Invalid index" +
+                    index);
+```
+
+I also added the following line to the two 'add' methods:
+```java
+if(o == null){
+            throw new NullPointerException("Error (add): Object o was null");
+        }
+```
+
+To check for null inputs
+
+With these changes i got the following test results:
 
