@@ -112,3 +112,81 @@ isNotYearLeap           |   | X |   |   |   | X |   | X |
 *Since 100 will always be divisble by 4 and 400 will also always be divisble by both 4 and 100, some of the scenarios will techichally be impossible*
 
 
+## State Transition
+
+#### 1. State Diagrams
+
+Diagram for add:
+
+![](https://github.com/kristian94/test-case-exercises/blob/master/img/add.png)
+
+---
+
+Diagram for size:
+
+![](https://github.com/kristian94/test-case-exercises/blob/master/img/size.png)
+
+---
+
+Diagram for get:
+
+![](https://github.com/kristian94/test-case-exercises/blob/master/img/get.png)
+
+---
+
+Diagram for add (with index):
+
+![](https://github.com/kristian94/test-case-exercises/blob/master/img/add%20with%20index.png)
+
+---
+
+Diagram for remove:
+
+![](https://github.com/kristian94/test-case-exercises/blob/master/img/remove.png)
+
+---
+
+#### 2. Test Cases:
+
+###### add
+
+input | expected output
+--- | ---
+new Object() | list updated
+null | exception thrown
+
+###### size
+
+input | expected output
+--- | ---
+new 'MyArrayList' instance | return 0
+populated 'MyArrayList' instance | return number of elements
+
+###### get
+
+input | expected output
+--- | ---
+valid index | return object at index
+invalid | throw IndexOutOfBoundsException
+
+###### add (with index)
+
+input index | input object | expected output
+--- | --- | ---
+valid index | valid object | insert object at index
+valid index | invalid object | throw NullPointerException
+invalid index | valid object | throw IndexOutOfBoundsException
+invalid index | invalid object | throw IndexOutOfBoundsException
+
+###### remove
+
+input | expected output
+--- | ---
+valid index | remove element from list, return removed element
+invalid | throw IndexOutOfBoundsException
+
+#### 3. Unit Tests
+
+See 
+
+
