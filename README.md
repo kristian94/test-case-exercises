@@ -1,5 +1,8 @@
 # Test Case Exercises
 
+*The code for the Unit Test part of the exercise can be found in this repository in the "code" folder. The "Orig" folder contains
+the original exercise code unaltered, and the "Refactored" folder contains the Unit Tests and Revised Code*
+
 ## Equivalence Classes
 
 #### 1. isEven
